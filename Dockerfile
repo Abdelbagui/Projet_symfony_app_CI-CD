@@ -6,7 +6,7 @@ RUN apt-get update && \
 
 COPY scripts/symfony.conf /etc/apache2/sites-available/
 COPY scripts/script-1.sh /script-1.sh
-COPY fastlist.zip /var/www/
+COPY Application/fastlist.zip /var/www/
 
 RUN chmod +x /script-1.sh
 
