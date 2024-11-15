@@ -19,7 +19,7 @@ docker run -d -p 8080:80 symfony_app
    docker build -t abdelbagui/symfony_app:latest .
    docker push abdelbagui/symfony_app:latest
    ```
-   ![alt text](image-2.png)
+   ![alt text](image/image-2.png)
    - **Conseil :** Si votre image est volumineuse, envisagez d'utiliser des étapes multistages dans votre `Dockerfile` pour réduire sa taille.
 
 2. **Vérifications :**
@@ -39,7 +39,7 @@ docker run -d -p 8080:80 symfony_app
      az aks create -g <resource-group-name> -n <cluster-name> --node-count 1 --generate-ssh-keys
      az aks get-credentials -g <resource-group-name> -n <cluster-name>
      ```
-![alt text](image.png)
+![alt text](image/image.png)
 
 2. **Créer les fichiers YAML :**
    - **`deployment.yml`:**
@@ -107,7 +107,7 @@ docker run -d -p 8080:80 symfony_app
    - Accédez à l'URL du service (générée automatiquement pour les types `LoadBalancer`).
 
 ---
-![alt text](image-3.png)
+![alt text](image/image-3.png)
 ### **Conseils supplémentaires :**
 - **Logs et débogage :**
   - Si un pod ne fonctionne pas, utilisez :
@@ -118,9 +118,9 @@ docker run -d -p 8080:80 symfony_app
     ```bash
     kubectl describe pod <pod-name>
     ```
-![alt text](image-1.png)
+![alt text](image/image-1.png)
 voici notre Application
-![alt text](image-4.png)
+![alt text](image/image-4.png)
 - **Automatisation :** Vous pouvez utiliser des outils comme **Helm** pour simplifier la gestion des configurations YAML.
 
 - **Surveillance :** Configurez des outils comme **Prometheus** ou **Azure Monitor** pour suivre les performances de votre cluster.
